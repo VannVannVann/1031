@@ -9,17 +9,27 @@ operation = input("Would you like to add/subtract/multiple/divide: ")
 first_number = float(first_input)
 second_number = float(second_input)
 
-if operation == "add":
-    result = first_number + second_number   
-    print(f"Result: {result}")
-elif operation == "subtract":
+def calculator_add():
+    result = first_number + second_number
+    print(f"Result : {result}")
+def calculator_substract():    
     result = first_number - second_number
-    print(f"Result: {result}")
-elif operation == "multiply":
+    print(f"Result : {result}")
+def calculator_multiple():    
     result = first_number * second_number
-    print(f"Result: {result}")
-elif operation == "divide":
+    print(f"Result : {result}")
+def calculator_divide():    
     result = first_number / second_number
-    print(f"Result: {result}")
+    print(f"Result : {result}")
+
+if operation.lower() == "add":
+    calculator_add()
+elif operation.lower() == "subtract":
+    calculator_substract()
+elif operation.lower() == "multiple":
+    calculator_multiple()
+elif operation.lower() == "divide":        
+    calculator_divide()      
 else:
     print("Sorry, I do not understand your request.")
+
